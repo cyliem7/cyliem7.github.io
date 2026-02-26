@@ -10,7 +10,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/cyliem7.github.io",
   resolve: {
     alias: {
       // Alias @ to the src directory
