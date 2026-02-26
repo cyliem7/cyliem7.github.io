@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { projects } from "./data/projects";
@@ -7,18 +7,25 @@ import { Briefcase, Mail, Github, Linkedin, MountainSnow, GithubIcon } from "luc
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  let gradient = "bg-gradient-to-br from-pink-400 to-purple-500";
+  const [scrollToProjects, setScrollToProjects] = useState(false);
+  const projectsSectionRef = useRef<HTMLElement | null>(null);
 
   if (selectedProject) {
     return (
       <div className="min-h-screen bg-white p-6 md:p-12">
         <ProjectDetail 
           project={selectedProject} 
-          onBack={() => setSelectedProject(null)}
+          onBack={() => {
+            setSelectedProject(null);
+            setScrollToProjects(true);
+          }}
         />
       </div>
     );
+  }
+
+  if (scrollToProjects && !selectedProject) {
+    projectsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start"});
   }
 
   return (
@@ -142,7 +149,7 @@ export default function App() {
       </section>
 
       {/* Projects Grid */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 relative">
+      <section ref={projectsSectionRef} className="max-w-7xl mx-auto px-6 pb-16 relative">
         <div className="mb-12 text-center projects">
           <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects 🎨</h3>
           <p className="text-xl text-purple-700">Explore detailed design rationale and live demos</p>
