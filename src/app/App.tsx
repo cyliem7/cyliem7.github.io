@@ -3,7 +3,7 @@ import { ProjectCard } from "./components/ProjectCard";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { projects } from "./data/projects";
 import { Project } from "./types/project";
-import { Briefcase, Mail, Github, Linkedin } from "lucide-react";
+import { Briefcase, Mail, Github, Linkedin, MountainSnow, GithubIcon } from "lucide-react";
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -32,11 +32,12 @@ export default function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="size-12 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-cyan-500 flex items-center justify-center shadow-xl animate-pulse" style={{ transform: 'rotate(-5deg)' }}>
-                <Briefcase className="size-6 text-white" />
+                <MountainSnow className="size-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Cylie Miller</h1>
-                <p className="text-sm text-purple-600">Frontend Development & Design ✨</p>
+                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Frontend Development & Design ✨</p>
+                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Based in Boulder, CO</p>
               </div>
             </div>
             

@@ -13,9 +13,15 @@ interface ProjectDetailProps {
 
 export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
   const DemoComponent = project.demoComponent;
+  
+  window.scrollTo(0,0);
 
   return (
     <div className="max-w-7xl mx-auto bg-gradient-to-br from-purple-50 via-pink-50 to-cyan-50 min-h-screen p-6 rounded-3xl">
+      <div>
+        
+      </div>
+
       <Button 
         variant="ghost" 
         onClick={onBack}
@@ -34,20 +40,28 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
           <Badge className="ml-4 shrink-0 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-lg px-4 py-2">{project.category}</Badge>
         </div>
         
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 mb-4">
           {project.tags.map((tag) => (
             <Badge key={tag} variant="outline" className="text-purple-700 text-sm">
               {tag}
             </Badge>
           ))}
         </div>
+
+        <div>
+          <img 
+          src={project.thumbnail} 
+          alt={project.title}
+          className="w-3xl object-cover"
+        />
+        </div>
       </div>
 
       <Tabs defaultValue="rationale" className="w-full">
         <TabsList className="grid w-full grid-cols-3 mb-8 bg-white p-2 rounded-2xl h-auto shadow-lg">
-          <TabsTrigger value="rationale" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Design Rationale 🎨</TabsTrigger>
-          <TabsTrigger value="demo" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Live Demo ✨</TabsTrigger>
-          <TabsTrigger value="process" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Process 🚀</TabsTrigger>
+          <TabsTrigger value="rationale" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Design Rationale</TabsTrigger>
+          <TabsTrigger value="demo" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Live Demo</TabsTrigger>
+          <TabsTrigger value="process" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Process</TabsTrigger>
         </TabsList>
 
         <TabsContent value="rationale" className="space-y-6">
