@@ -94,7 +94,7 @@ export default function App() {
               <div className="p-8 md:p-12 bg-gradient-to-br from-pink-100 via-purple-100 to-cyan-100">
                 <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 shadow-2xl transform hover:scale-105 transition-transform duration-300" style={{ transform: 'rotate(3deg)' }}>
                   <img 
-                    src="./assets/img/aboutMePhoto.jpg"
+                    src="./src/assets/img/aboutMePhoto.jpg"
                     alt="Cylie Miller"
                     className="w-full h-full object-cover"
                     style={{ transform: 'rotate(-3deg)' }}
