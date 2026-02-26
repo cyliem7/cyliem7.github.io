@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { projects } from "./data/projects";
@@ -8,7 +8,14 @@ import { Briefcase, Mail, Github, Linkedin, MountainSnow, GithubIcon } from "luc
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [scrollToProjects, setScrollToProjects] = useState(false);
-  const projectsSectionRef = useRef<HTMLElement | null>(null);
+  const projectsSectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if(scrollToProjects) {
+      projectsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start"});
+      setScrollToProjects(false);
+    }
+  }, [scrollToProjects]);
 
   if (selectedProject) {
     return (
@@ -23,11 +30,7 @@ export default function App() {
       </div>
     );
   }
-
-  if (scrollToProjects && !selectedProject) {
-    projectsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start"});
-  }
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-cyan-100 overflow-hidden relative">
       {/* Floating decorative elements */}
