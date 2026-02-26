@@ -8,12 +8,14 @@ import { Briefcase, Mail, Github, Linkedin, MountainSnow, GithubIcon } from "luc
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  let gradient = "bg-gradient-to-br from-pink-400 to-purple-500";
+
   if (selectedProject) {
     return (
       <div className="min-h-screen bg-white p-6 md:p-12">
         <ProjectDetail 
           project={selectedProject} 
-          onBack={() => setSelectedProject(null)} 
+          onBack={() => setSelectedProject(null)}
         />
       </div>
     );
@@ -71,13 +73,13 @@ export default function App() {
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <div className="px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full shadow-xl transform -rotate-2 hover:rotate-0 transition-transform">
-              💜 Creative
+              Creative
             </div>
             <div className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full shadow-xl transform rotate-1 hover:rotate-0 transition-transform">
-              ✨ Innovative
+              Innovative
             </div>
             <div className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-pink-500 text-white rounded-full shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
-              🎨 Passionate
+              Passionate
             </div>
           </div>
         </div>
@@ -141,27 +143,31 @@ export default function App() {
 
       {/* Projects Grid */}
       <section className="max-w-7xl mx-auto px-6 pb-16 relative">
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center projects">
           <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects 🎨</h3>
           <p className="text-xl text-purple-700">Explore detailed design rationale and live demos</p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 relative">
-          {projects.map((project, index) => (
-            <div 
-              key={project.id}
-              style={{ 
-                transform: index % 2 === 0 ? 'rotate(-2deg)' : 'rotate(2deg)',
-                marginTop: index % 2 === 0 ? '0' : '2rem'
-              }}
-              className="hover:z-10 relative"
-            >
-              <ProjectCard 
-                project={project}
-                onClick={() => setSelectedProject(project)}
-              />
-            </div>
-          ))}
+          {projects.map((project, index) => {
+            if (project.active)
+            {
+              return (
+              <div 
+                key={project.id}
+                style={{ 
+                  transform: index % 2 === 0 ? 'rotate(-2deg)' : 'rotate(2deg)',
+                  marginTop: index % 2 === 0 ? '0' : '2rem'
+                }}
+                className="hover:z-10 relative"
+              >
+                <ProjectCard 
+                  project={project}
+                  onClick={() => setSelectedProject(project)}
+                />
+              </div>);
+            }
+          } )}
         </div>
       </section>
 

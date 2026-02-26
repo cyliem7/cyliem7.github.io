@@ -28,6 +28,7 @@ export interface Iteration {
 
 export interface Project {
   id: string;
+  active: boolean;
   title: string;
   description: string;
   category: string;

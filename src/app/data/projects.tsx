@@ -5,6 +5,7 @@ import { PricingTableDemo } from "../components/demos/PricingTableDemo";
 export const projects: Project[] = [
   {
     id: "westry-site", 
+    active: true,
     title: "Jewelry Website and Branding", 
     description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, quality work.", 
     category: "Web Design", 
@@ -36,6 +37,7 @@ export const projects: Project[] = [
   },
   {
     id: "task-manager",
+    active: false,
     title: "Collaborative Task Manager",
     description: "A modern task management interface designed for team collaboration with real-time updates and intuitive workflows.",
     category: "Web Application",
@@ -90,6 +92,7 @@ export const projects: Project[] = [
   },
   {
     id: "pricing-table",
+    active: false,
     title: "SaaS Pricing Page",
     description: "A conversion-optimized pricing page designed to clearly communicate value propositions and drive subscriptions.",
     category: "Marketing Site",
