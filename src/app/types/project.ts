@@ -33,6 +33,7 @@ export interface Project {
   description: string;
   category: string;
   thumbnail: string;
+  url: string;
   designRationale: DesignRationale;
   story: string;
   challenge: string;

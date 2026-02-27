@@ -49,11 +49,11 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
         </div>
 
         <div>
-          <img 
+          <a href={project.url}><img 
           src={project.thumbnail} 
           alt={project.title}
           className="w-3xl object-cover"
-        />
+        /></a>
         </div>
       </div>
 
