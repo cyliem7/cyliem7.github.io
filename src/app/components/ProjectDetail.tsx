@@ -60,7 +60,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
       <Tabs defaultValue="rationale" className="w-full">
         <TabsList className="grid w-full grid-cols-3 mb-8 bg-white p-2 rounded-2xl h-auto shadow-lg">
           <TabsTrigger value="rationale" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Design Rationale</TabsTrigger>
-          <TabsTrigger value="demo" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Live Demo</TabsTrigger>
+          <TabsTrigger value="demo" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Demo</TabsTrigger>
           <TabsTrigger value="process" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Process</TabsTrigger>
         </TabsList>
 
