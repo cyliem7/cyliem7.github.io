@@ -49,11 +49,19 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
         </div>
 
         <div>
-          <a href={project.url}><img 
-          src={project.thumbnail} 
-          alt={project.title}
-          className="w-3xl object-cover"
-        /></a>
+          {project.url ? (
+            <a href={project.url} target="_blank" rel="noopener noreferrer" title=""><img 
+              src={project.thumbnail} 
+              alt={project.title}
+              className="w-3xl object-cover"
+            /></a>) : 
+            (
+              <img 
+              src={project.thumbnail} 
+              alt={project.title}
+              className="w-3xl object-cover"
+              />
+            )}
         </div>
       </div>
 

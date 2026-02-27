@@ -6,6 +6,7 @@ import { WestryWebsite } from "../components/demos/WestryWebsite"
 const urlProjectImgPrefix = "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects"
 
 export const projects: Project[] = [
+  /* Template */
   {
     id: "template-project", 
     active: false,
@@ -39,47 +40,7 @@ export const projects: Project[] = [
     }, 
     iterations: []
   },
-  {
-    id: "boxbreathing-project", 
-    active: true,
-    title: "Box Breathing App", 
-    description: "Simple design built to help you quickly relax and release stress.", 
-    category: "App Development", 
-    thumbnail: `${urlProjectImgPrefix}/boxBreathingAppWide.png`, 
-    url: "",
-    tags: ["Typescript", "UI/UX", "CSS", "Figma"], 
-    story: "I feel relaxed when I can just get a few moments of breathing.  Why not make something to aid and guide that process?", 
-    challenge: "Meditation Apps like this already exist and are very popular.", 
-    solution: "Sometimes doing too much takes away from the original intention of the app.  Let's strip away everything but what is needed.", 
-    designRationale: {
-      typography: {
-        choices: "Quicksand - A google font.", 
-        reasoning: "The font should help create the calming feeling that we want the user to experience."
-      }, 
-      colorScheme: {
-        choices: "Subtle gradient with blues and purples.",
-        palette: ["#A0BBF2", "#B3B2FF", "#BBABFF", "#F5F6FF", "#222F40"],
-        reasoning: "This subtle color palette includes cool color tones and mimics the calming ocean aesthetic."
-      },
-      spacing: {
-        choices: "Lots of spacing between elements for the circle to grow and contract.",
-        reasoning: "The circle mimics the breath and needs plenty of space to expand.  I decided to keep a little overlap on the 'waves' as it created some depth to the design.  Overall, I wanted minimal elements and lots of space between them."
-      },
-      visualHierarchy: {
-        choices: "All main page elements are vertically aligned.  The stats page is separate to provide information, but not to distract the user during their breathing session.",
-        reasoning: "The simplicity and minmalism of the visuals make the intention obvious.  The importance of participating in a breathing exercise comes first.  Everything else is second to that intention."
-      }
-    }, 
-    iterations: [
-      {
-        version: "1.0",
-        date: "2026-02-27",
-        feedback: "",
-        changes: "",
-        improvements: ""
-      }
-    ]
-  },
+  /* Westry */
   {
     id: "westry-site", 
     active: true,
@@ -129,6 +90,48 @@ export const projects: Project[] = [
     ], 
     demoComponent: WestryWebsite
   },
+  /* Box Breathing */
+  {
+    id: "boxbreathing-project", 
+    active: true,
+    title: "Box Breathing App", 
+    description: "Simple design built to help you quickly relax and release stress.", 
+    category: "App Development", 
+    thumbnail: `${urlProjectImgPrefix}/boxBreathingAppWide.png`,
+    tags: ["Typescript", "UI/UX", "CSS", "Figma"], 
+    story: "I feel relaxed when I can just get a few moments of breathing.  Why not make something to aid and guide that process?", 
+    challenge: "Meditation Apps like this already exist and are very popular.", 
+    solution: "Sometimes doing too much takes away from the original intention of the app.  Let's strip away everything but what is needed.", 
+    designRationale: {
+      typography: {
+        choices: "Quicksand - A google font.", 
+        reasoning: "The font should help create the calming feeling that we want the user to experience."
+      }, 
+      colorScheme: {
+        choices: "Subtle gradient with blues and purples.",
+        palette: ["#A0BBF2", "#B3B2FF", "#BBABFF", "#F5F6FF", "#222F40"],
+        reasoning: "This subtle color palette includes cool color tones and mimics the calming ocean aesthetic."
+      },
+      spacing: {
+        choices: "Lots of spacing between elements for the circle to grow and contract.",
+        reasoning: "The circle mimics the breath and needs plenty of space to expand.  I decided to keep a little overlap on the 'waves' as it created some depth to the design.  Overall, I wanted minimal elements and lots of space between them."
+      },
+      visualHierarchy: {
+        choices: "All main page elements are vertically aligned.  The stats page is separate to provide information, but not to distract the user during their breathing session.",
+        reasoning: "The simplicity and minmalism of the visuals make the intention obvious.  The importance of participating in a breathing exercise comes first.  Everything else is second to that intention."
+      }
+    }, 
+    iterations: [
+      {
+        version: "1.0",
+        date: "2026-02-27",
+        feedback: "",
+        changes: "",
+        improvements: ""
+      }
+    ]
+  },
+  /* Sample Project 1 */
   {
     id: "task-manager",
     active: false,
@@ -185,6 +188,7 @@ export const projects: Project[] = [
     ],
     demoComponent: TaskManagerDemo
   },
+  /* Sample Project 2 */
   {
     id: "pricing-table",
     active: false,
