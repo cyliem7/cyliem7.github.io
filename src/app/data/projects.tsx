@@ -41,10 +41,10 @@ export const projects: Project[] = [
     id: "boxbreathing-project", 
     active: true,
     title: "Box Breathing App", 
-    description: "Simple design built to help you quickly relax and destress.", 
+    description: "Simple design built to help you quickly relax and release stress.", 
     category: "App Development", 
     thumbnail: `${urlProjectImgPrefix}/boxBreathingAppWide.png`, 
-    tags: ["Javascript", "UI/UX", "CSS"], 
+    tags: ["Typescript", "UI/UX", "CSS", "Figma"], 
     story: "I feel relaxed when I can just get a few moments of breathing.  Why not make something to aid and guide that process?", 
     challenge: "Meditation Apps like this already exist and are very popular.", 
     solution: "Sometimes doing too much takes away from the original intention of the app.  Let's strip away everything but what is needed.", 
@@ -59,12 +59,12 @@ export const projects: Project[] = [
         reasoning: "This subtle color palette includes cool color tones and mimics the calming ocean aesthetic."
       },
       spacing: {
-        choices: "8px base unit with consistent 16px/24px/32px spacing between components.",
-        reasoning: "The 8-point grid system ensures consistent rhythm across the interface. Larger spacing (32px) separates major sections, while tighter spacing (8px) groups related elements, creating clear visual relationships."
+        choices: "Lots of spacing between elements for the circle to grow and contract.",
+        reasoning: "The circle mimics the breath and needs plenty of space to expand.  I decided to keep a little overlap on the 'waves' as it created some depth to the design.  Overall, I wanted minimal elements and lots of space between them."
       },
       visualHierarchy: {
-        choices: "Task titles are prominent, metadata (dates, assignees) is secondary in lighter text. Action buttons appear on hover to reduce clutter.",
-        reasoning: "Users scan task titles first, so they're the most prominent element. Supporting information is visible but de-emphasized. Progressive disclosure (hover states) keeps the interface clean while maintaining quick access to actions."
+        choices: "All main page elements are vertically aligned.  The stats page is separate to provide information, but not to distract the user during their breathing session.",
+        reasoning: "The simplicity and minmalism of the visuals make the intention obvious.  The importance of participating in a breathing exercise comes first.  Everything else is second to that intention."
       }
     }, 
     iterations: [
@@ -80,34 +80,49 @@ export const projects: Project[] = [
   {
     id: "westry-site", 
     active: true,
-    title: "Jewelry Website and Branding", 
-    description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, quality work.", 
+    title: "Website and Branding for my Jewelry Business", 
+    description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, high quality work.", 
     category: "Web Design", 
     thumbnail: `${urlProjectImgPrefix}/westryWebsite.png`, 
     tags: ["UI/UX", "Web Design", "Shopify", "Branding"], 
     story: "", 
     challenge: "There are other jewelry artists that tell a similar story.  How do we make mine unique?", 
-    solution: "", 
+    solution: "I focused my website around the color scheme and ease of navigation.  I wanted to keep the focus around the jewelry, while telling the story of the outdoor lifestyle through images and color.", 
     designRationale: {
       typography: {
-        choices: "", 
-        reasoning: ""
+        choices: "Crimson Text", 
+        reasoning: "This text appeared to me as being both modern and western.  It fit the aesthetic that I also try to portray in my jewelry."
       }, 
       colorScheme: {
-        choices: "Neutral base (grays) with accent colors for priority levels: Blue (normal), Orange (medium), Red (high).",
-        palette: ["#F8F9FA", "#6366F1", "#F59E0B", "#EF4444", "#10B981"],
-        reasoning: "The neutral palette reduces visual fatigue during extended use. Priority colors follow common conventions (red = urgent) to leverage existing mental models. Green for completed tasks provides positive reinforcement."
+        choices: "Rust orange and faded green with a pop of golden sunshine yellow.",
+        palette: ["#B6B592", "#90533b", "#B87B5C", "#BF9435", "#FFFBF6", "#333333"],
+        reasoning: "This color palette combines my love for both the desert and mountain landscapes."
       },
       spacing: {
-        choices: "8px base unit with consistent 16px/24px/32px spacing between components.",
-        reasoning: "The 8-point grid system ensures consistent rhythm across the interface. Larger spacing (32px) separates major sections, while tighter spacing (8px) groups related elements, creating clear visual relationships."
+        choices: "Plenty of whitespace between cards.",
+        reasoning: "Giving room between each product gives the user a less overwhelming shopping experience."
       },
       visualHierarchy: {
-        choices: "Task titles are prominent, metadata (dates, assignees) is secondary in lighter text. Action buttons appear on hover to reduce clutter.",
-        reasoning: "Users scan task titles first, so they're the most prominent element. Supporting information is visible but de-emphasized. Progressive disclosure (hover states) keeps the interface clean while maintaining quick access to actions."
+        choices: "Large image banners and slideshows. Connecting my Instagram to display posts. Having a featured section on my homepage.",
+        reasoning: "Image banners are showing more of the brand identity rather than the focus just being on the jewelry itself.  I am more active on Instagram than I am with my website and want to connect traffic between the two channels.  I have pieces that I feel like draw more attention and want them to have a special feature on the homepage."
       }
     }, 
-    iterations: []
+    iterations: [
+      {
+        version: "1.0",
+        date: "2023-04-13",
+        feedback: "",
+        changes: "Needed to finalize brand identity.",
+        improvements: "Added a color scheme that fit with my brand."
+      },
+      {
+        version: "1.1",
+        date: "2023-10-02",
+        feedback: "",
+        changes: "Updated photos.",
+        improvements: "Took professional photos that aligned with the brand."
+      },
+    ]
   },
   {
     id: "task-manager",
