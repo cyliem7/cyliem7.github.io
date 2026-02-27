@@ -1,6 +1,7 @@
 import { Project } from "../types/project";
 import { TaskManagerDemo } from "../components/demos/TaskManagerDemo";
 import { PricingTableDemo } from "../components/demos/PricingTableDemo";
+import { WestryWebsite } from "../components/demos/WestryWebsite"
 
 const urlProjectImgPrefix = "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects"
 
@@ -122,7 +123,8 @@ export const projects: Project[] = [
         changes: "Updated photos.",
         improvements: "Took professional photos that aligned with the brand."
       },
-    ]
+    ], 
+    demoComponent: WestryWebsite
   },
   {
     id: "task-manager",
