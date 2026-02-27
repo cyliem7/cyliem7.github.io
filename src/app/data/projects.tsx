@@ -41,7 +41,7 @@ export const projects: Project[] = [
     title: "Box Breathing App", 
     description: "Simple design built to help you quickly relax and destress.", 
     category: "App Development", 
-    thumbnail: "", 
+    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/boxBreathingApp.png", 
     tags: ["Javascript", "UI/UX", "CSS"], 
     story: "I feel relaxed when I can just get a few moments of breathing.  Why not make something to aid and guide that process?", 
     challenge: "Meditation Apps like this already exist and are very popular.", 
