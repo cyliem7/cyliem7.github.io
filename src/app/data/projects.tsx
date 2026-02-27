@@ -81,7 +81,7 @@ export const projects: Project[] = [
     title: "Jewelry Website and Branding", 
     description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, quality work.", 
     category: "Web Design", 
-    thumbnail: "./src/assets/img/projects/westryWebsite.png", 
+    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite.png", 
     tags: ["UI/UX", "Web Design", "Shopify", "Branding"], 
     story: "", 
     challenge: "There are other jewelry artists that tell a similar story.  How do we make mine unique?", 
