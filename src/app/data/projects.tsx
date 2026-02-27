@@ -4,12 +4,84 @@ import { PricingTableDemo } from "../components/demos/PricingTableDemo";
 
 export const projects: Project[] = [
   {
+    id: "template-project", 
+    active: false,
+    title: "", 
+    description: "", 
+    category: "", 
+    thumbnail: "", 
+    tags: [""], 
+    story: "", 
+    challenge: "", 
+    solution: "", 
+    designRationale: {
+      typography: {
+        choices: "", 
+        reasoning: ""
+      }, 
+      colorScheme: {
+        choices: "Neutral base (grays) with accent colors for priority levels: Blue (normal), Orange (medium), Red (high).",
+        palette: ["#F8F9FA", "#6366F1", "#F59E0B", "#EF4444", "#10B981"],
+        reasoning: "The neutral palette reduces visual fatigue during extended use. Priority colors follow common conventions (red = urgent) to leverage existing mental models. Green for completed tasks provides positive reinforcement."
+      },
+      spacing: {
+        choices: "8px base unit with consistent 16px/24px/32px spacing between components.",
+        reasoning: "The 8-point grid system ensures consistent rhythm across the interface. Larger spacing (32px) separates major sections, while tighter spacing (8px) groups related elements, creating clear visual relationships."
+      },
+      visualHierarchy: {
+        choices: "Task titles are prominent, metadata (dates, assignees) is secondary in lighter text. Action buttons appear on hover to reduce clutter.",
+        reasoning: "Users scan task titles first, so they're the most prominent element. Supporting information is visible but de-emphasized. Progressive disclosure (hover states) keeps the interface clean while maintaining quick access to actions."
+      }
+    }, 
+    iterations: []
+  },
+  {
+    id: "boxbreathing-project", 
+    active: true,
+    title: "Box Breathing App", 
+    description: "Simple design built to help you quickly relax and destress.", 
+    category: "App Development", 
+    thumbnail: "", 
+    tags: ["Javascript", "UI/UX", "CSS"], 
+    story: "I feel relaxed when I can just get a few moments of breathing.  Why not make something to aid and guide that process?", 
+    challenge: "Meditation Apps like this already exist and are very popular.", 
+    solution: "Sometimes doing too much takes away from the original intention of the app.  Let's strip away everything but what is needed.", 
+    designRationale: {
+      typography: {
+        choices: "Quicksand - A google font.", 
+        reasoning: "The font should help create the calming feeling that we want the user to experience."
+      }, 
+      colorScheme: {
+        choices: "Subtle gradient with blues and purples.",
+        palette: ["#A0BBF2", "#B3B2FF", "#BBABFF", "#F5F6FF", "#222F40"],
+        reasoning: "This subtle color palette includes cool color tones and mimics the calming ocean aesthetic."
+      },
+      spacing: {
+        choices: "8px base unit with consistent 16px/24px/32px spacing between components.",
+        reasoning: "The 8-point grid system ensures consistent rhythm across the interface. Larger spacing (32px) separates major sections, while tighter spacing (8px) groups related elements, creating clear visual relationships."
+      },
+      visualHierarchy: {
+        choices: "Task titles are prominent, metadata (dates, assignees) is secondary in lighter text. Action buttons appear on hover to reduce clutter.",
+        reasoning: "Users scan task titles first, so they're the most prominent element. Supporting information is visible but de-emphasized. Progressive disclosure (hover states) keeps the interface clean while maintaining quick access to actions."
+      }
+    }, 
+    iterations: [
+      {
+        version: "1.0",
+        date: "2026-02-27",
+        feedback: "",
+        changes: "",
+        improvements: ""
+      }
+    ]
+  },
+  {
     id: "westry-site", 
     active: true,
     title: "Jewelry Website and Branding", 
     description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, quality work.", 
     category: "Web Design", 
-    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite.png", 
+    thumbnail: "./src/assets/img/projects/westryWebsite.png", 
     tags: ["UI/UX", "Web Design", "Shopify", "Branding"], 
     story: "", 
     challenge: "There are other jewelry artists that tell a similar story.  How do we make mine unique?", 
