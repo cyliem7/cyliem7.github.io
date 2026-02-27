@@ -120,10 +120,10 @@ export default function App() {
                     Hi, I'm Cylie! I'm a frontend designer who believes that great design is more than just aesthetics—it's about solving real problems and creating meaningful user experiences.
                   </p>
                   <p>
-                    With a background in both design and development, I bridge the gap between beautiful interfaces and functional code. I'm passionate about design systems, accessibility, and crafting interfaces that feel intuitive and delightful.
+                    I bridge the gap between beautiful interfaces and functional code. I'm passionate about expressing your creativity and working on projects that make the world a better place.
                   </p>
                   <p>
-                    When I'm not designing, you can find me exploring new design tools, contributing to open-source projects, or sharing what I've learned with the design community.
+                    When I'm not designing, I am learning, spending time outdoors, or making jewelry.
                   </p>
                 </div>
                 
