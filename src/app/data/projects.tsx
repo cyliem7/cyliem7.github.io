@@ -84,7 +84,7 @@ export const projects: Project[] = [
     title: "Website and Branding for my Jewelry Business", 
     description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, high quality work.", 
     category: "Web Design", 
-    thumbnail: `${urlProjectImgPrefix}/westryWebsite.png`, 
+    thumbnail: `${urlProjectImgPrefix}/westryWebsite/westryWebsite.png`, 
     tags: ["UI/UX", "Web Design", "Shopify", "Branding"], 
     story: "", 
     challenge: "There are other jewelry artists that tell a similar story.  How do we make mine unique?", 
