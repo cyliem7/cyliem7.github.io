@@ -2,6 +2,8 @@ import { Project } from "../types/project";
 import { TaskManagerDemo } from "../components/demos/TaskManagerDemo";
 import { PricingTableDemo } from "../components/demos/PricingTableDemo";
 
+const urlProjectImgPrefix = "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects"
+
 export const projects: Project[] = [
   {
     id: "template-project", 
@@ -41,7 +43,7 @@ export const projects: Project[] = [
     title: "Box Breathing App", 
     description: "Simple design built to help you quickly relax and destress.", 
     category: "App Development", 
-    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/boxBreathingApp.png", 
+    thumbnail: `${urlProjectImgPrefix}projects/boxBreathingAppWide.png`, 
     tags: ["Javascript", "UI/UX", "CSS"], 
     story: "I feel relaxed when I can just get a few moments of breathing.  Why not make something to aid and guide that process?", 
     challenge: "Meditation Apps like this already exist and are very popular.", 
@@ -81,7 +83,7 @@ export const projects: Project[] = [
     title: "Jewelry Website and Branding", 
     description: "A modern take on western jewelry.  Website and branding designed for an outdoorsy audience that appreciates slow, quality work.", 
     category: "Web Design", 
-    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite.png", 
+    thumbnail: `${urlProjectImgPrefix}westryWebsite.png`, 
     tags: ["UI/UX", "Web Design", "Shopify", "Branding"], 
     story: "", 
     challenge: "There are other jewelry artists that tell a similar story.  How do we make mine unique?", 
