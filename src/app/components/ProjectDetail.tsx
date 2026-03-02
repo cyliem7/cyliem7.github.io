@@ -34,10 +34,9 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
       <div className="mb-8 bg-white rounded-3xl p-8 shadow-lg">
         <div className="flex items-start justify-between mb-4">
           <div>
-            <h1 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">{project.title}</h1>
+            <h1 className="text-5xl pb-5 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">{project.title}</h1>
             <p className="text-2xl text-gray-700">{project.description}</p>
           </div>
-          <Badge className="ml-4 shrink-0 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-lg px-4 py-2">{project.category}</Badge>
         </div>
         
         <div className="flex flex-wrap gap-3 mb-4">
@@ -67,7 +66,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 
       <Tabs defaultValue="rationale" className="w-full">
         <TabsList className="grid w-full grid-cols-3 mb-8 bg-white p-2 rounded-2xl h-auto shadow-lg">
-          <TabsTrigger value="rationale" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Design Rationale</TabsTrigger>
+          <TabsTrigger value="rationale" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Design</TabsTrigger>
           <TabsTrigger value="demo" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Demo</TabsTrigger>
           <TabsTrigger value="process" className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-purple-500 data-[state=active]:text-white rounded-xl text-lg py-3">Process</TabsTrigger>
         </TabsList>

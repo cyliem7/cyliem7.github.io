@@ -82,13 +82,13 @@ export default function App() {
             color theory, spatial relationships, and iterative improvements based on real feedback.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <div className="px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full shadow-xl transform -rotate-2 hover:rotate-0 transition-transform">
+            <div className="px-6 py-2 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full shadow-xl transform -rotate-2 hover:rotate-0 transition-transform">
               Creative
             </div>
-            <div className="px-6 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full shadow-xl transform rotate-1 hover:rotate-0 transition-transform">
+            <div className="px-6 py-2 bg-gradient-to-r from-purple-400 to-indigo-400 text-white rounded-full shadow-xl transform rotate-1 hover:rotate-0 transition-transform">
               Innovative
             </div>
-            <div className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
+            <div className="px-6 py-2 bg-gradient-to-r from-indigo-400 to-pink-400 text-white rounded-full shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
               Passionate
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function App() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a 
                     href="mailto:cylie@westry.co" 
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:shadow-2xl transition-all transform hover:scale-105 hover:-rotate-2"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full hover:shadow-2xl transition-all transform hover:scale-105 hover:-rotate-2"
                   >
                     <Mail className="size-5" />
                     Get in Touch
@@ -154,7 +154,7 @@ export default function App() {
       {/* Projects Grid */}
       <section ref={projectsSectionRef} className="max-w-7xl mx-auto px-6 pb-16 relative">
         <div className="mb-12 text-center projects">
-          <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects 🎨</h3>
+          <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects</h3>
           <p className="text-xl text-purple-700">Explore detailed design rationale and live demos</p>
         </div>
         
