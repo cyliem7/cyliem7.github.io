@@ -164,10 +164,6 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 
         <TabsContent value="demo">
           <Card className="p-10 rounded-3xl bg-white shadow-xl">
-            <div className="mb-8 text-center">
-              <h3 className="text-3xl mb-3 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Interactive Demo ✨</h3>
-              <p className="text-xl text-gray-600">Experience the design in action</p>
-            </div>
             {DemoComponent ? (
               <DemoComponent />
             ) : (
@@ -180,9 +176,8 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
 
         <TabsContent value="process" className="space-y-6">
           <Card className="p-8 rounded-3xl bg-white shadow-xl">
-            <h3 className="text-3xl mb-6 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">The Story 📖</h3>
+            <h3 className="text-3xl mb-6 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">The Story</h3>
             <p className="text-gray-700 leading-relaxed mb-6 text-lg">{project.story}</p>
-            
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-6 bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl">
                 <h4 className="mb-3 text-xl bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">⚡ Challenge</h4>
@@ -200,7 +195,7 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
               <div className="p-3 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl">
                 <GitBranch className="size-7 text-white" />
               </div>
-              <h3 className="text-3xl bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Design Iterations 🔄</h3>
+              <h3 className="text-3xl bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Design Iterations</h3>
             </div>
             
             <Accordion type="single" collapsible className="w-full">

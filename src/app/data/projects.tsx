@@ -50,7 +50,7 @@ export const projects: Project[] = [
     thumbnail: `${urlProjectImgPrefix}/westryWebsite/westryWebsite.png`, 
     url: "https://westry.co/",
     tags: ["UI/UX", "Web Design", "Shopify", "Branding"], 
-    story: "", 
+    story: "I am a part-time silversmith and needed a website for releasing my pieces.  I mainly sell my work through art events in person, however, I liked the idea of being able to share my work with those who I am connected with on social media and do not live nearby.", 
     challenge: "There are other jewelry artists that tell a similar story.  How do we make mine unique?", 
     solution: "I focused my website around the color scheme and ease of navigation.  I wanted to keep the focus around the jewelry, while telling the story of the outdoor lifestyle through images and color.", 
     designRationale: {
