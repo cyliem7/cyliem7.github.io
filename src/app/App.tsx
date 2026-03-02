@@ -32,24 +32,24 @@ export default function App() {
   }
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-cyan-100 overflow-hidden relative">
+    <div className="min-h-screen bg-gradient-to-b from-purple-200 via-pink-100 to-indigo-100 overflow-hidden relative">
       {/* Floating decorative elements */}
       <div className="absolute top-20 left-10 size-32 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full opacity-20 blur-3xl animate-pulse" />
-      <div className="absolute top-40 right-20 size-48 bg-gradient-to-br from-cyan-400 to-pink-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-40 left-1/4 size-40 bg-gradient-to-br from-purple-400 to-cyan-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-40 right-20 size-48 bg-gradient-to-br from-indigo-400 to-pink-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-40 left-1/4 size-40 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       
       {/* Header */}
       <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-2xl">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="size-12 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-cyan-500 flex items-center justify-center shadow-xl animate-pulse" style={{ transform: 'rotate(-5deg)' }}>
+              <div className="size-12 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center shadow-xl animate-pulse" style={{ transform: 'rotate(-5deg)' }}>
                 <MountainSnow className="size-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Cylie Miller</h1>
-                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Frontend Development & Design ✨</p>
-                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">Based in Boulder, CO</p>
+                <h1 className="text-2xl bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Cylie Miller</h1>
+                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Frontend Development & Design ✨</p>
+                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Based in Boulder, CO</p>
               </div>
             </div>
             
@@ -71,24 +71,24 @@ export default function App() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-20 relative">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-7xl mb-8 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent drop-shadow-2xl" style={{ transform: 'rotate(-1deg)' }}>
+          <h2 className="text-7xl mb-8 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent drop-shadow-2xl" style={{ transform: 'rotate(-1deg)' }}>
             The Need to Create,
             <br />
             The Skills to Develop ⚡
           </h2>
           <p className="text-2xl text-purple-900 leading-relaxed mb-6">
-            I create user-centered digital experiences backed by intentional design decisions. 
-            Each project showcases my process from challenge to solution, including typography choices, 
+            I enjoy design and devloping creative work with intentional decisions. Each project showcases my process 
+            from challenge to solution, including typography choices, 
             color theory, spatial relationships, and iterative improvements based on real feedback.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <div className="px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full shadow-xl transform -rotate-2 hover:rotate-0 transition-transform">
               Creative
             </div>
-            <div className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full shadow-xl transform rotate-1 hover:rotate-0 transition-transform">
+            <div className="px-6 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full shadow-xl transform rotate-1 hover:rotate-0 transition-transform">
               Innovative
             </div>
-            <div className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-pink-500 text-white rounded-full shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
+            <div className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded-full shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
               Passionate
             </div>
           </div>
@@ -101,8 +101,8 @@ export default function App() {
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:rotate-0">
             <div className="grid md:grid-cols-2 gap-0 items-center">
               {/* Photo */}
-              <div className="p-8 md:p-12 bg-gradient-to-br from-pink-100 via-purple-100 to-cyan-100">
-                <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 shadow-2xl transform hover:scale-105 transition-transform duration-300" style={{ transform: 'rotate(3deg)' }}>
+              <div className="p-8 md:p-12 bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100">
+                <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400 shadow-2xl transform hover:scale-105 transition-transform duration-300" style={{ transform: 'rotate(3deg)' }}>
                   <img 
                     src="https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/aboutMePhoto.jpg"
                     alt="Cylie Miller"
@@ -117,7 +117,7 @@ export default function App() {
                 <h3 className="text-4xl mb-6 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">About Me 🌟</h3>
                 <div className="space-y-4 text-gray-700 text-lg">
                   <p>
-                    Hi, I'm Cylie! I'm a frontend designer who believes that great design is more than just aesthetics—it's about solving real problems and creating meaningful user experiences.
+                    Hi, I'm Cylie! I'm a frontend designer who believes that great design is more than just aesthetics.  It's about solving real problems and creating meaningful user experiences.
                   </p>
                   <p>
                     I bridge the gap between beautiful interfaces and functional code. I'm passionate about expressing one's creativity and working on projects that make the world a better place.
@@ -154,7 +154,7 @@ export default function App() {
       {/* Projects Grid */}
       <section ref={projectsSectionRef} className="max-w-7xl mx-auto px-6 pb-16 relative">
         <div className="mb-12 text-center projects">
-          <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects 🎨</h3>
+          <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects 🎨</h3>
           <p className="text-xl text-purple-700">Explore detailed design rationale and live demos</p>
         </div>
         
@@ -182,7 +182,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-purple-600 via-pink-600 to-cyan-600 text-white">
+      <footer className="bg-gradient-to-b from-purple-500 to-indigo-500 text-white">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -207,7 +207,7 @@ export default function App() {
               <p className="text-purple-100 text-sm mb-2">
                 Let's collaborate on your next project ✨
               </p>
-              <a href="mailto:cylie@westry.co" className="text-white hover:text-cyan-200 text-sm underline decoration-wavy">
+              <a href="mailto:cylie@westry.co" className="text-white hover:text-indigo-200 text-sm underline decoration-wavy">
                 cylie@westry.co
               </a>
             </div>
