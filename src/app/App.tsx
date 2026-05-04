@@ -32,7 +32,7 @@ export default function App() {
   }
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-200 via-pink-100 to-indigo-100 overflow-hidden relative">
+    <div className="min-h-screen overflow-hidden relative">
       {/* Floating decorative elements */}
       <div className="absolute top-20 left-10 size-32 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full opacity-20 blur-3xl animate-pulse" />
       <div className="absolute top-40 right-20 size-48 bg-gradient-to-br from-indigo-400 to-pink-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -182,12 +182,12 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-b from-purple-500 to-indigo-500 text-white">
+      <footer className="bg-white/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h4 className="mb-3 text-xl">About</h4>
-              <p className="text-purple-100 text-sm">
+              <p className="text-sm">
                 A frontend designer passionate about creating intuitive, beautiful interfaces 
                 that solve real user problems.
               </p>
@@ -204,7 +204,7 @@ export default function App() {
             </div>
             <div>
               <h4 className="mb-3 text-xl">Contact</h4>
-              <p className="text-purple-100 text-sm mb-2">
+              <p className="text-sm mb-2">
                 Let's collaborate on your next project ✨
               </p>
               <a href="mailto:cylie@westry.co" className="text-white hover:text-indigo-200 text-sm underline decoration-wavy">
@@ -212,7 +212,7 @@ export default function App() {
               </a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-white/30 text-center text-purple-100 text-sm">
+          <div className="mt-8 pt-8 border-t border-white/30 text-center text-sm">
             © 2026 Design Portfolio. Built with intention & creativity 💜
           </div>
         </div>
