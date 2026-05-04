@@ -1,222 +1,259 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { ProjectCard } from "./components/ProjectCard";
-import { ProjectDetail } from "./components/ProjectDetail";
-import { projects } from "./data/projects";
-import { Project } from "./types/project";
-import { Briefcase, Mail, Github, Linkedin, MountainSnow, GithubIcon } from "lucide-react";
+import { ProjectDialog, type Project } from "./components/ProjectDialog";
+import { AnimatedHeading } from "./components/AnimatedHeading";
+
+const projects: Project[] = [
+  {
+    id: "1",
+    title: "Brand Identity System",
+    year: "2026",
+    category: "Visual Design",
+    thumbnail: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
+    description: "A comprehensive brand identity system exploring the intersection of traditional craft and digital innovation. This project challenged conventional approaches to brand consistency while maintaining flexibility across diverse touchpoints.",
+    details: [
+      { label: "Role", value: "Lead Designer" },
+      { label: "Duration", value: "3 months" },
+      { label: "Tools", value: "Figma, Illustrator, After Effects" },
+      { label: "Deliverables", value: "Logo suite, Style guide, Motion guidelines" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=1200&h=800&fit=crop", alt: "Brand overview" },
+      { type: "image", url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop", alt: "Logo variations" },
+      { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
+    ],
+  },
+  {
+    id: "2",
+    title: "Mobile Banking App",
+    year: "2025",
+    category: "Product Design",
+    thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+    description: "Redesigning the mobile banking experience with a focus on accessibility and trust. The project involved extensive user research with diverse age groups to create an interface that feels both modern and approachable.",
+    details: [
+      { label: "Role", value: "UX/UI Designer" },
+      { label: "Duration", value: "6 months" },
+      { label: "Platform", value: "iOS, Android" },
+      { label: "Team", value: "2 designers, 4 developers, 1 PM" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=800&fit=crop", alt: "App interface" },
+      { type: "image", url: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop", alt: "User flow" },
+    ],
+  },
+  {
+    id: "3",
+    title: "Interactive Installation",
+    year: "2025",
+    category: "Experiential",
+    thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    description: "An immersive public art installation that responds to environmental data through light and sound. Created in collaboration with local artists and technologists for the city's annual design festival.",
+    details: [
+      { label: "Role", value: "Creative Director" },
+      { label: "Location", value: "Public Square, Downtown" },
+      { label: "Duration", value: "2 week installation" },
+      { label: "Collaboration", value: "Sound designer, Developer, Fabricator" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop", alt: "Installation view" },
+    ],
+  },
+  {
+    id: "4",
+    title: "Editorial Publication",
+    year: "2024",
+    category: "Print Design",
+    thumbnail: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop",
+    description: "Quarterly magazine exploring emerging design practices and critical perspectives. Each issue features a unique grid system and typographic approach that reflects the editorial content.",
+    details: [
+      { label: "Role", value: "Art Director" },
+      { label: "Format", value: "210 × 297mm, 120 pages" },
+      { label: "Print Run", value: "5,000 copies" },
+      { label: "Awards", value: "Communication Arts Design Annual" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop", alt: "Magazine spread" },
+      { type: "image", url: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=800&fit=crop", alt: "Cover design" },
+    ],
+  },
+  {
+    id: "5",
+    title: "E-commerce Platform",
+    year: "2024",
+    category: "Web Design",
+    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    description: "A sustainable fashion marketplace that prioritizes transparency and ethical sourcing. The design system emphasizes product photography while maintaining clean, distraction-free browsing.",
+    details: [
+      { label: "Role", value: "Product Designer" },
+      { label: "Scope", value: "Web responsive, Design system" },
+      { label: "Impact", value: "40% increase in conversion rate" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop", alt: "Homepage" },
+      { type: "image", url: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&h=800&fit=crop", alt: "Product page" },
+    ],
+  },
+  {
+    id: "6",
+    title: "Typeface Design",
+    year: "2024",
+    category: "Typography",
+    thumbnail: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+    description: "A geometric display typeface inspired by early modernist poster design. The family includes three weights with alternate glyphs for increased versatility in headline applications.",
+    details: [
+      { label: "Role", value: "Type Designer" },
+      { label: "Glyphs", value: "450+ characters" },
+      { label: "Weights", value: "Light, Regular, Bold" },
+      { label: "License", value: "Open source" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=800&fit=crop", alt: "Type specimen" },
+    ],
+  },
+];
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [scrollToProjects, setScrollToProjects] = useState(false);
-  const projectsSectionRef = useRef<HTMLDivElement | null>(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
-  useEffect(() => {
-    if(scrollToProjects) {
-      projectsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start"});
-      setScrollToProjects(false);
-    }
-  }, [scrollToProjects]);
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setDialogOpen(true);
+  };
 
-  if (selectedProject) {
-    return (
-      <div className="min-h-screen bg-white p-6 md:p-12">
-        <ProjectDetail 
-          project={selectedProject} 
-          onBack={() => {
-            setSelectedProject(null);
-            setScrollToProjects(true);
-          }}
-        />
-      </div>
-    );
-  }
-  
   return (
-    <div className="min-h-screen overflow-hidden relative">
-      {/* Floating decorative elements */}
-      <div className="absolute top-20 left-10 size-32 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full opacity-20 blur-3xl animate-pulse" />
-      <div className="absolute top-40 right-20 size-48 bg-gradient-to-br from-indigo-400 to-pink-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-40 left-1/4 size-40 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-      
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="size-12 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center shadow-xl animate-pulse" style={{ transform: 'rotate(-5deg)' }}>
-                <MountainSnow className="size-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-2xl bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Cylie Miller</h1>
-                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Frontend Development & Design ✨</p>
-                <p className="text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Based in Boulder, CO</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <a href="mailto:hello@example.com" className="text-purple-600 hover:text-pink-600 transition-all hover:scale-110 transform hover:rotate-12">
-                <Mail className="size-5" />
-              </a>
-              <a href="https://github.com/cyliem7" className="text-purple-600 hover:text-pink-600 transition-all hover:scale-110 transform hover:rotate-12" target="_blank" rel="noopener noreferrer">
-                <Github className="size-5" />
-              </a>
-              <a href="https://www.linkedin.com/in/cyliemiller" className="text-purple-600 hover:text-pink-600 transition-all hover:scale-110 transform hover:rotate-12" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="size-5" />
-              </a>
-            </div>
-          </div>
+      <header className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          <h1 className="font-mono mb-2">Your Name</h1>
+          <p className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
+            Designer / Creative Technologist
+          </p>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 relative">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-7xl mb-8 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent drop-shadow-2xl" style={{ transform: 'rotate(-1deg)' }}>
-            The Need to Create,
-            <br />
-            The Skills to Develop ⚡
-          </h2>
-          <p className="text-2xl text-purple-900 leading-relaxed mb-6">
-            I enjoy design and devloping creative work with intentional decisions. Each project showcases my process 
-            from challenge to solution, including typography choices, 
-            color theory, spatial relationships, and iterative improvements based on real feedback.
-          </p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            <div className="px-6 py-2 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full shadow-xl transform -rotate-2 hover:rotate-0 transition-transform">
-              Creative
-            </div>
-            <div className="px-6 py-2 bg-gradient-to-r from-purple-400 to-indigo-400 text-white rounded-full shadow-xl transform rotate-1 hover:rotate-0 transition-transform">
-              Innovative
-            </div>
-            <div className="px-6 py-2 bg-gradient-to-r from-indigo-400 to-pink-400 text-white rounded-full shadow-xl transform -rotate-1 hover:rotate-0 transition-transform">
-              Passionate
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Me Section - Floating */}
-      <section className="max-w-7xl mx-auto px-6 py-16 relative">
-        <div className="relative" style={{ transform: 'rotate(-1deg)' }}>
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:rotate-0">
-            <div className="grid md:grid-cols-2 gap-0 items-center">
-              {/* Photo */}
-              <div className="p-8 md:p-12 bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100">
-                <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400 shadow-2xl transform hover:scale-105 transition-transform duration-300" style={{ transform: 'rotate(3deg)' }}>
-                  <img 
-                    src="https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/aboutMePhoto.jpg"
-                    alt="Cylie Miller"
-                    className="w-full h-full object-cover"
-                    style={{ transform: 'rotate(-3deg)' }}
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8 md:p-12">
-                <h3 className="text-4xl mb-6 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">About Me 🌟</h3>
-                <div className="space-y-4 text-gray-700 text-lg">
-                  <p>
-                    Hi, I'm Cylie! I'm a frontend designer who believes that great design is more than just aesthetics.  It's about solving real problems and creating meaningful user experiences.
-                  </p>
-                  <p>
-                    I bridge the gap between beautiful interfaces and functional code. I'm passionate about expressing one's creativity and working on projects that make the world a better place.
-                  </p>
-                  <p>
-                    When I'm not designing, I am learning, spending time outdoors, or making jewelry.
-                  </p>
-                </div>
-                
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <a 
-                    href="mailto:cylie@westry.co" 
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-400 text-white rounded-full hover:shadow-2xl transition-all transform hover:scale-105 hover:-rotate-2"
-                  >
-                    <Mail className="size-5" />
-                    Get in Touch
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/in/cyliemiller" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-3 border-purple-400 bg-white rounded-full hover:bg-purple-50 transition-all transform hover:scale-105 hover:rotate-2"
-                  >
-                    <Linkedin className="size-5 text-purple-600" />
-                    Connect
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Projects Grid */}
-      <section ref={projectsSectionRef} className="max-w-7xl mx-auto px-6 pb-16 relative">
-        <div className="mb-12 text-center projects">
-          <h3 className="text-5xl mb-4 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>Featured Projects</h3>
-          <p className="text-xl text-purple-700">Explore detailed design rationale and live demos</p>
+      <main className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mb-12">
+          <div className="mb-2">
+            <AnimatedHeading text="Selected Works" />
+          </div>
+          <div className="h-[2px] w-16 bg-foreground" />
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 relative">
-          {projects.map((project, index) => {
-            if (project.active)
-            {
-              return (
-              <div 
-                key={project.id}
-                style={{ 
-                  transform: index % 2 === 0 ? 'rotate(-2deg)' : 'rotate(2deg)',
-                  marginTop: index % 2 === 0 ? '0' : '2rem'
-                }}
-                className="hover:z-10 relative"
-              >
-                <ProjectCard 
-                  project={project}
-                  onClick={() => setSelectedProject(project)}
-                />
-              </div>);
-            }
-          } )}
+
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              year={project.year}
+              category={project.category}
+              thumbnail={project.thumbnail}
+              onClick={() => handleProjectClick(project)}
+            />
+          ))}
+        </div>
+      </main>
+
+      {/* About Section */}
+      <section className="mt-24">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="mb-12">
+            <div className="mb-2">
+              <AnimatedHeading text="About" />
+            </div>
+            <div className="h-[2px] w-16 bg-foreground" />
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-[300px_1fr_1fr]">
+            {/* Photo */}
+            <div className="border border-border overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop"
+                alt="Your Name"
+                className="h-full w-full object-cover aspect-[3/4]"
+              />
+            </div>
+
+            {/* Bio */}
+            <div className="space-y-6">
+              <p className="font-mono text-sm leading-relaxed">
+                I'm a designer and creative technologist focused on crafting thoughtful digital experiences.
+                With a background spanning visual design, product development, and interactive installations,
+                I approach each project as an opportunity to explore new possibilities at the intersection of
+                form and function.
+              </p>
+              <p className="font-mono text-sm leading-relaxed">
+                My work is driven by curiosity about how design can shape the way people interact with
+                technology and each other. I believe in creating solutions that are both aesthetically
+                considered and deeply purposeful.
+              </p>
+              <p className="font-mono text-sm leading-relaxed">
+                Currently available for select projects and collaborations.
+              </p>
+            </div>
+
+            {/* Capabilities & Contact */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-mono mb-4 pb-2 border-b border-border">Capabilities</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="font-mono text-sm">UI/UX Design</div>
+                  <div className="font-mono text-sm">Brand Identity</div>
+                  <div className="font-mono text-sm">Prototyping</div>
+                  <div className="font-mono text-sm">Design Systems</div>
+                  <div className="font-mono text-sm">Typography</div>
+                  <div className="font-mono text-sm">Creative Direction</div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-mono mb-4 pb-2 border-b border-border">Contact</h3>
+                <div className="space-y-2">
+                  <a
+                    href="mailto:hello@yourname.com"
+                    className="block font-mono text-sm hover:text-muted-foreground transition-colors"
+                  >
+                    hello@yourname.com
+                  </a>
+                  <a
+                    href="https://twitter.com/yourhandle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block font-mono text-sm hover:text-muted-foreground transition-colors"
+                  >
+                    Twitter
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/yourhandle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block font-mono text-sm hover:text-muted-foreground transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white/90 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="mb-3 text-xl">About</h4>
-              <p className="text-sm">
-                A frontend designer passionate about creating intuitive, beautiful interfaces 
-                that solve real user problems.
-              </p>
-            </div>
-            <div>
-              <h4 className="mb-3 text-xl">Skills</h4>
-              <div className="flex flex-wrap gap-2">
-                {["Javascript", "Typescript", "UI/UX Design", "React", "Tailwind CSS", "Figma", "User Testing", "Design Systems", "SQL", "C#", "REST API"].map((skill) => (
-                  <span key={skill} className="text-sm bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4 className="mb-3 text-xl">Contact</h4>
-              <p className="text-sm mb-2">
-                Let's collaborate on your next project ✨
-              </p>
-              <a href="mailto:cylie@westry.co" className="text-white hover:text-indigo-200 text-sm underline decoration-wavy">
-                cylie@westry.co
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-white/30 text-center text-sm">
-            © 2026 Design Portfolio. Built with intention & creativity 💜
-          </div>
+      <footer className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 py-8">
+          <p className="font-mono text-sm text-muted-foreground">
+            © 2026 • Available for select projects
+          </p>
         </div>
       </footer>
+
+      <ProjectDialog
+        project={selectedProject}
+        open={dialogOpen}
+        onOpenChange={setDialogOpen}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 
-  # Frontend Design Portfolio
+  # Portfolio website
 
-  This is a code bundle for Frontend Design Portfolio. The original project is available at https://www.figma.com/design/OUhOPMbKfg6zsueUWhH27j/Frontend-Design-Portfolio.
+  This is a code bundle for Portfolio website. The original project is available at https://www.figma.com/design/JoZbZLiZGjuqEPSnYFMxFJ/Portfolio-website.
 
   ## Running the code
 
