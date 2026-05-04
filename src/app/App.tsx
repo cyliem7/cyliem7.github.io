@@ -9,7 +9,7 @@ const projects: Project[] = [
     title: "Westry Brand",
     year: "2024",
     category: "Brand Design",
-    thumbnail: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
+    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite/websiteHeaderMobile.png?w=800&h=600&fit=crop",
     description: "Jewelry brand identity inspired by wide open spaces, western jewelry, and being in nature. The project involved creating a brand identity with color palette, logo suite, website, and photography.",
     details: [
       { label: "Role", value: "Owner and designer" },
@@ -17,10 +17,10 @@ const projects: Project[] = [
       { label: "Tools", value: "Canva, Shopify, Illustrator, Lightroom" },
       { label: "Deliverables", value: "Brand template, website, social media assets" },
     ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=1200&h=800&fit=crop", alt: "Brand overview" },
-      { type: "image", url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop", alt: "Logo variations" },
-      { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
+      gallery: [
+        { type: "image", url: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite/websiteHeaderMobile.png?w=1200&h=800&fit=crop", alt: "Brand overview" },
+        { type: "image", url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop", alt: "Logo variations" },
+        { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
     ],
   },
   {
