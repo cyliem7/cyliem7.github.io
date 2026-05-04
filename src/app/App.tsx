@@ -212,10 +212,10 @@ export default function App() {
                 <h3 className="font-mono mb-4 pb-2 border-b border-border">Contact</h3>
                 <div className="space-y-2">
                   <a
-                    href="mailto:hello@yourname.com"
+                    href="mailto:cylie.a.miller@gmail.com"
                     className="block font-mono text-sm hover:text-muted-foreground transition-colors"
                   >
-                    hello@yourname.com
+                    cylie.a.miller@gmail.com
                   </a>
                   <a
                     href="https://twitter.com/yourhandle"
@@ -226,7 +226,7 @@ export default function App() {
                     Twitter
                   </a>
                   <a
-                    href="https://linkedin.com/in/yourhandle"
+                    href="https://linkedin.com/in/cylie-miller"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block font-mono text-sm hover:text-muted-foreground transition-colors"
