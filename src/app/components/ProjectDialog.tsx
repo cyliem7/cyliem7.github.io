@@ -135,7 +135,17 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                       <dt className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
                         {detail.label}
                       </dt>
-                      <dd className="font-mono text-sm col-span-2">{detail.value}</dd>
+                      {detail.label.toLowerCase() === "link" ? (
+                        <dd className="font-mono text-sm col-span-2">
+                          <a href={detail.value} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                            {detail.value}
+                          </a>
+                        </dd>
+                      ) : (
+                        <dd className="font-mono text-sm col-span-2">
+                          <span>{detail.value}</span>
+                        </dd>
+                      )}
                     </div>
                   ))}
                 </dl>

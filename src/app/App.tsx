@@ -9,126 +9,20 @@ const projects: Project[] = [
     title: "Westry Brand",
     year: "2024",
     category: "Brand Design",
-    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite/websiteHeaderMobile.png?w=800&h=600&fit=crop",
+    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite/westryWebsiteHeader.png?w=800&h=600&fit=crop",
     description: "Jewelry brand identity inspired by wide open spaces, western jewelry, and being in nature. The project involved creating a brand identity with color palette, logo suite, website, and photography.",
     details: [
+      { label: "Link", value: "https://westry.co" },
       { label: "Role", value: "Owner and designer" },
-      { label: "Duration", value: "3 months" },
       { label: "Tools", value: "Canva, Shopify, Illustrator, Lightroom" },
       { label: "Deliverables", value: "Brand template, website, social media assets" },
     ],
       gallery: [
-        { type: "image", url: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite/websiteHeaderMobile.png?w=1200&h=800&fit=crop", alt: "Brand overview" },
+        { type: "image", url: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/westryWebsite/westryWebsiteHeader.png?w=1200&h=800&fit=crop", alt: "Brand overview" },
         { type: "image", url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop", alt: "Logo variations" },
         { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
     ],
-  },
-  {
-    id: "1",
-    title: "Brand Identity System",
-    year: "2026",
-    category: "Visual Design",
-    thumbnail: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
-    description: "A comprehensive brand identity system exploring the intersection of traditional craft and digital innovation. This project challenged conventional approaches to brand consistency while maintaining flexibility across diverse touchpoints.",
-    details: [
-      { label: "Role", value: "Lead Designer" },
-      { label: "Duration", value: "3 months" },
-      { label: "Tools", value: "Figma, Illustrator, After Effects" },
-      { label: "Deliverables", value: "Logo suite, Style guide, Motion guidelines" },
-    ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=1200&h=800&fit=crop", alt: "Brand overview" },
-      { type: "image", url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop", alt: "Logo variations" },
-      { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
-    ],
-  },
-  {
-    id: "2",
-    title: "Mobile Banking App",
-    year: "2025",
-    category: "Product Design",
-    thumbnail: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
-    description: "Redesigning the mobile banking experience with a focus on accessibility and trust. The project involved extensive user research with diverse age groups to create an interface that feels both modern and approachable.",
-    details: [
-      { label: "Role", value: "UX/UI Designer" },
-      { label: "Duration", value: "6 months" },
-      { label: "Platform", value: "iOS, Android" },
-      { label: "Team", value: "2 designers, 4 developers, 1 PM" },
-    ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=800&fit=crop", alt: "App interface" },
-      { type: "image", url: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop", alt: "User flow" },
-    ],
-  },
-  {
-    id: "3",
-    title: "Interactive Installation",
-    year: "2025",
-    category: "Experiential",
-    thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-    description: "An immersive public art installation that responds to environmental data through light and sound. Created in collaboration with local artists and technologists for the city's annual design festival.",
-    details: [
-      { label: "Role", value: "Creative Director" },
-      { label: "Location", value: "Public Square, Downtown" },
-      { label: "Duration", value: "2 week installation" },
-      { label: "Collaboration", value: "Sound designer, Developer, Fabricator" },
-    ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop", alt: "Installation view" },
-    ],
-  },
-  {
-    id: "4",
-    title: "Editorial Publication",
-    year: "2024",
-    category: "Print Design",
-    thumbnail: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&h=600&fit=crop",
-    description: "Quarterly magazine exploring emerging design practices and critical perspectives. Each issue features a unique grid system and typographic approach that reflects the editorial content.",
-    details: [
-      { label: "Role", value: "Art Director" },
-      { label: "Format", value: "210 × 297mm, 120 pages" },
-      { label: "Print Run", value: "5,000 copies" },
-      { label: "Awards", value: "Communication Arts Design Annual" },
-    ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop", alt: "Magazine spread" },
-      { type: "image", url: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=800&fit=crop", alt: "Cover design" },
-    ],
-  },
-  {
-    id: "5",
-    title: "E-commerce Platform",
-    year: "2024",
-    category: "Web Design",
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    description: "A sustainable fashion marketplace that prioritizes transparency and ethical sourcing. The design system emphasizes product photography while maintaining clean, distraction-free browsing.",
-    details: [
-      { label: "Role", value: "Product Designer" },
-      { label: "Scope", value: "Web responsive, Design system" },
-      { label: "Impact", value: "40% increase in conversion rate" },
-    ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop", alt: "Homepage" },
-      { type: "image", url: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&h=800&fit=crop", alt: "Product page" },
-    ],
-  },
-  {
-    id: "6",
-    title: "Typeface Design",
-    year: "2024",
-    category: "Typography",
-    thumbnail: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-    description: "A geometric display typeface inspired by early modernist poster design. The family includes three weights with alternate glyphs for increased versatility in headline applications.",
-    details: [
-      { label: "Role", value: "Type Designer" },
-      { label: "Glyphs", value: "450+ characters" },
-      { label: "Weights", value: "Light, Regular, Bold" },
-      { label: "License", value: "Open source" },
-    ],
-    gallery: [
-      { type: "image", url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=800&fit=crop", alt: "Type specimen" },
-    ],
-  },
+  }
 ];
 
 export default function App() {
@@ -198,7 +92,7 @@ export default function App() {
             {/* Bio */}
             <div className="space-y-6">
               <p className="font-mono text-sm leading-relaxed">
-                I'm a designer and creative technologist focused on crafting thoughtful digital experiences.
+                I'm a designer and creative focused on crafting thoughtful digital experiences.
                 With a background spanning visual design, product development, and interactive installations,
                 I approach each project as an opportunity to explore new possibilities at the intersection of
                 form and function.
@@ -234,18 +128,10 @@ export default function App() {
                     href="mailto:cylie.a.miller@gmail.com"
                     className="block font-mono text-sm hover:text-muted-foreground transition-colors"
                   >
-                    cylie.a.miller@gmail.com
+                    Email
                   </a>
                   <a
-                    href="https://twitter.com/yourhandle"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block font-mono text-sm hover:text-muted-foreground transition-colors"
-                  >
-                    Twitter
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/cylie-miller"
+                    href="https://www.linkedin.com/in/cyliemiller/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block font-mono text-sm hover:text-muted-foreground transition-colors"
