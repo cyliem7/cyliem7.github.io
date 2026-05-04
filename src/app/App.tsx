@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { ProjectDialog, type Project } from "./components/ProjectDialog";
 import { AnimatedHeading } from "./components/AnimatedHeading";
@@ -126,9 +126,9 @@ export default function App() {
       {/* Header */}
       <header className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 py-12">
-          <h1 className="font-mono mb-2">Your Name</h1>
+          <h1 className="font-mono mb-2">Cylie Miller</h1>
           <p className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
-            Designer / Creative Technologist
+            Designer / Creative
           </p>
         </div>
       </header>
