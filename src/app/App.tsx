@@ -4,6 +4,25 @@ import { ProjectDialog, type Project } from "./components/ProjectDialog";
 import { AnimatedHeading } from "./components/AnimatedHeading";
 
 const projects: Project[] = [
+    {
+    id: "1",
+    title: "Westry Brand",
+    year: "2024",
+    category: "Brand Design",
+    thumbnail: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=600&fit=crop",
+    description: "Jewelry brand identity inspired by wide open spaces, western jewelry, and being in nature. The project involved creating a brand identity with color palette, logo suite, website, and photography.",
+    details: [
+      { label: "Role", value: "Owner and designer" },
+      { label: "Duration", value: "3 months" },
+      { label: "Tools", value: "Canva, Shopify, Illustrator, Lightroom" },
+      { label: "Deliverables", value: "Brand template, website, social media assets" },
+    ],
+    gallery: [
+      { type: "image", url: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=1200&h=800&fit=crop", alt: "Brand overview" },
+      { type: "image", url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=800&fit=crop", alt: "Logo variations" },
+      { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
+    ],
+  },
   {
     id: "1",
     title: "Brand Identity System",
@@ -170,7 +189,7 @@ export default function App() {
             {/* Photo */}
             <div className="border border-border overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop"
+                src="https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/aboutMePhoto.jpg?w=600&h=800&fit=crop"
                 alt="Your Name"
                 className="h-full w-full object-cover aspect-[3/4]"
               />
