@@ -28,7 +28,7 @@ const projects: Project[] = [
     title: "Seed Ring Concept",
     year: "2026",
     category: "Jewelry Product Design",
-    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/seedRing/SeedRingConcept.mp4",
+    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/seedRing/SeedRingConceptPic.png",
     description: "Creating an organic, timeless piece that represents change and growth.",
     details: [
       { label: "Link", value: "https://westry.co" },
