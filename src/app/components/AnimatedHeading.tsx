@@ -46,7 +46,6 @@ export function AnimatedHeading({ text }: AnimatedHeadingProps) {
           className="inline-block"
           whileHover={{
             y: -8,
-            color: "var(--muted-foreground)",
             transition: { type: "spring", stiffness: 300, damping: 10 },
           }}
         >

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { ProjectDialog, type Project } from "./components/ProjectDialog";
 import { AnimatedHeading } from "./components/AnimatedHeading";
@@ -69,7 +69,7 @@ export default function App() {
       <main className="mx-auto max-w-7xl px-6 py-16">
         <div className="mb-12">
           <div className="mb-2">
-            <AnimatedHeading text="Selected Works" />
+            <AnimatedHeading text="Featured Work" />
           </div>
           <div className="h-[2px] w-16 bg-foreground" />
         </div>
@@ -88,7 +88,7 @@ export default function App() {
         </div>
       </main>
 
-      {/* About Section */}
+            {/* About Section */}
       <section className="mt-24">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="mb-12">
