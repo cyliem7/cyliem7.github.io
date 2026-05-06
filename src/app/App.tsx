@@ -28,7 +28,7 @@ const projects: Project[] = [
     title: "Seed Ring Concept",
     year: "2026",
     category: "Jewelry Product Design",
-    thumbnail: "https://github.com/cyliem7/cyliem7.github.io/blob/fb42abdb7d2c757268fcf567ffbd7beeccd31dfb/src/assets/img/projects/seedRing/SeedRingConcept.mp4?w=800&h=600&fit=crop",
+    thumbnail: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/seedRing/SeedRingConcept.mp4",
     description: "Creating an organic, timeless piece that represents change and growth.",
     details: [
       { label: "Link", value: "https://westry.co" },
@@ -37,8 +37,8 @@ const projects: Project[] = [
       { label: "Deliverables", value: "Thought process, concept sketches, prototypes, mold, final piece" },
     ],
       gallery: [
-        { type: "video", url: "https://github.com/cyliem7/cyliem7.github.io/blob/fb42abdb7d2c757268fcf567ffbd7beeccd31dfb/src/assets/img/projects/seedRing/SeedRingConcept.mp4?w=800&h=600&fit=crop", alt: "Concept video" },
-        { type: "video", url: "https://github.com/cyliem7/cyliem7.github.io/blob/fb42abdb7d2c757268fcf567ffbd7beeccd31dfb/src/assets/img/projects/seedRing/SeedRingDrawing.mp4", alt: "Sketch video" },
+        { type: "video", url: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/seedRing/SeedRingConcept.mp4", alt: "Concept video" },
+        { type: "video", url: "https://raw.githubusercontent.com/cyliem7/cyliem7.github.io/refs/heads/main/src/assets/img/projects/seedRing/SeedRingDrawing.mp4", alt: "Sketch video" },
         { type: "image", url: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=1200&h=800&fit=crop", alt: "Color palette" },
     ],
   }
