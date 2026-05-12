@@ -51,6 +51,7 @@ const projects: Project[] = [
     description: "Creating an organic, timeless piece that represents change and growth.",
     details: [
       { label: "Role", value: "Designer" },
+      { label: "Inspiration", value: "Nature, sustainability, and the brand's identity" },
       { label: "Tools", value: "Adobe Illustrator, Canva" },
       { label: "Deliverables", value: "Create a unique jewelry packaging design that reflects the brand's identity and values. The packaging should be visually appealing, functional, and sustainable." },
     ],
